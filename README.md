@@ -12,20 +12,28 @@ A simple online class application, that allows a uer to signup first for the cla
 -   Student access items in that class.
 
 
-## Developer guide
+## Getting started
 
-1. Fork the repository.
-2. Clone the repository using 
-    ```git clone```
-3. Create a branch using 
-```git checkout -b branch-name``` 
+- Fork this repository.
+- Clone this repository anywhere on your machine, and navigate inside the repository. If your OS is windows, I'd recommend you make use of gitbash.
+```git 
+    git clone https://github.com/hngi/mini-classroom-TEAM-PRIAPUS.git && cd mini-classroom-TEAM-PRIAPUS
+```
+- Create a branch using 
+```git
+    git checkout -b branch-name
+``` 
 PS:- the branch name should be meaningful 
-4. Commit your changes using 
-```git commit -m "your message"```
-5. After commiting your changes, push to the current branch using  
-```git push origin HEAD``` or 
-```git push origin "the branch you're currently in"```
-6. Make your pull request. ```SIMPLE```
+- Commit your changes using 
+```git
+    git commit -m "your message"
+```
+- After commiting your changes, push to the current branch using  
+```git
+    git push origin HEAD or 
+    git push origin "the branch you're currently in"
+```
+- Make your pull request. ```SIMPLE```
 
 
-# HAPPY CODING!
+
