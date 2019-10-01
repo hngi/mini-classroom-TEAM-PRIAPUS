@@ -1,5 +1,4 @@
 # Mini-classroom (TEAM PRIAPUS)
-A simple online class application, that allows a uer to signup first for the class, allows the user to create a class (if the user signs up as teacher), add items/ lists of courses to be taught by him/her, and then gives access to to students to sign up for the class that has been created. 
 
 # TASK'S DESCRIPTION
 
@@ -34,6 +33,4 @@ PS:- the branch name should be meaningful
     git push origin "the branch you're currently in"
 ```
 - Make your pull request. ```SIMPLE```
-
-
 
