@@ -30,6 +30,14 @@
 
                             
                             <li class="nav-item">
+                                <a href="<?= base_url()?>index.php/teacher_es/students" class="nav-link ">
+                                    <i class="material-icons">group</i>
+                                    <span class="title">Students</span>
+                                </a>
+                            </li>
+
+                            
+                            <li class="nav-item">
                                 <a href="#" class="nav-link nav-toggle"> <i class="material-icons">school</i>
                                     <span class="title">Classes</span> <span class="arrow"></span>
                                 </a>
@@ -50,7 +58,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-toggle"> <i class="material-icons">group</i>
+                                <a href="#" class="nav-link nav-toggle"> <i class="material-icons">book</i>
                                     <span class="title">Items</span> <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
