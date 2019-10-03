@@ -3,7 +3,7 @@
             <div class="page-header-inner ">
                 <!-- logo start -->
                 <div class="page-logo">
-                    <a href="dashboard.html">
+                    <a href="<?= base_url()?>">
                         <span class="logo-icon material-icons fa-rotate-45">school</span>
                         <span class="logo-default">Priapus</span> </a>
                 </div>

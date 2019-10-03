@@ -72,7 +72,22 @@ public function all_class(){
   $data['list'] = $this->model_getvalues->getTableRows('class','teacher_id',$this->session->userdata('id'),'id');
   $this->load->view('teacher/classlist', $data);
   $this->load->view('teacher/footer');
-   }
+}
+
+public function students(){
+  $this->load->view('teacher/header');
+  $this->load->view('teacher/nav');
+  $this->load->view('teacher/aside');
+  $data['list'] = $this->model_getvalues->getAll('student');
+  $this->load->view('teacher/studentlist', $data);
+  $this->load->view('teacher/footer');
+}
+
+public function students_classes($class_id){
+  $class_ids = explode('-', $class_id);
+  $classes = $this->model_getvalues->getColumnByArray('class', 'class_name', 'id', $class_ids);
+  echo json_encode($classes);
+}
 
 public function add_item(){
     $this->load->view('teacher/header');
