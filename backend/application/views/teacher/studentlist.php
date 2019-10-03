@@ -46,16 +46,21 @@
                                             <thead>
                                                 <tr style="text-align: center;">
                                                     <th width="25%">Name</th>
-                                                    <th width="25%">Email</th>
-                                                    <th width="50%">Classes</th>
+                                                    <th width="30%">Email</th>
+                                                    <th width="45%">Classes</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             <?php foreach ($list as $key => $list): ?>
                                                 <tr class="odd gradeX">
                                                     <td><?= $list->name; ?></td>
-                                                    <td><?= $list->email; ?></td>
-                                                    <td id="student_<?= $list->id; ?>" ><a onclick="getClasses('<?= $list->id; ?>', '<?= $list->class_id; ?>')" class="btn btn-primary"><i class="fa fa-chevron-down"></i> Show</a></td>
+                                                    <td style="word-break:break-all;"><?= $list->email; ?></td>
+																										<td id="student_<?= $list->id; ?>" >
+																											<div class="btn-group">
+                                                        <a onclick="getClasses('<?= $list->id; ?>', '<?= $list->class_id; ?>')" class="btn btn-primary">
+																														<i class="fa fa-chevron-down"></i> Show
+																												</a>
+                                                    </td>
                                                 </tr>
                                              <?php endforeach;?>
                                             </tbody>
