@@ -49,6 +49,7 @@
                                                     
                                                     <th width="50%"> Class Name</th>
                                                     <th> Class Content</th>
+                                                    <th> Actions </th>
                                                     
                                                 </tr>
                                             </thead>
@@ -60,6 +61,12 @@
                                                     
                                                     <td><?= $list->class_name; ?></td>
                                                     <td><?= $list->class_details; ?></td>
+                                                    <td class="valigntop">
+                                                        <div class="btn-group">
+                                                            <a href="<?= base_url();?>index.php/teacher_es/edit_class/<?= $list->id;?>"
+                                                             class="btn btn-xs deepPink-bgcolor dropdown-toggle no-margin"  >
+                                                               View / Edit
+                                                            </a>
                                                 </tr>
                                              <?php endforeach;?>
                                             </tbody>

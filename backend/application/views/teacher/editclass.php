@@ -13,15 +13,15 @@
 					<div class="page-bar">
 						<div class="page-title-breadcrumb">
 							<div class=" pull-left">
-								<div class="page-title">Create Class</div>
+								<div class="page-title">Edit Class</div>
 							</div>
 							<ol class="breadcrumb page-breadcrumb pull-right">
 								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
 										href="dashboard.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li><a class="parent-item" href="">Class</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<li><a class="parent-item" href="">Edit</a>&nbsp;<i class="fa fa-angle-right"></i>
 								</li>
-								<li class="active">Create Class</li>
+								<li class="active">Edit Class</li>
 							</ol>
 						</div>
 					</div>
@@ -38,7 +38,7 @@
                                 <center> <strong><p style="color:red;"> <?php echo validation_errors(); ?> </p> </strong> </center>
 
 								<div class="card-body" id="bar-parent">
-									<form action="" method="post" class="form-horizontal">
+									<form action="<?= base_url();?>index.php/teacher_es/edit_class/<?= $user['id'];?>" method="post" class="form-horizontal">
 										<div class="form-body">
 											<div class="form-group row">
 												<label class="control-label col-md-3">Course Name
@@ -46,7 +46,7 @@
 												</label>
 												<div class="col-md-5">
 													<input type="text" name="class_name" placeholder="enter course name"
-														class="form-control input-height" />
+														class="form-control input-height" value="<?= ucfirst($user['class_name']) ?>"/>
 												</div>
 											</div>
 											<div class="form-group row">
@@ -55,14 +55,16 @@
 												</label>
 												<div class="col-md-5">
 													<textarea name="class_details" placeholder="course details"
-														class="form-control-textarea" rows="5" required></textarea>
+														class="form-control-textarea" value="" rows="5" required>
+                                                        <?= ucfirst($user['class_details']) ?>
+                                                        </textarea>
 												</div>
 											</div>
 											<div class="form-actions">
 												<div class="row">
 													<div class="offset-md-3 col-md-9">
 														<button type="submit"
-															class="btn btn-info m-r-20" name="submit">Submit</button>
+															class="btn btn-info m-r-20" name="save">SAVE</button>
 													</div>
 												</div>
 											</div>

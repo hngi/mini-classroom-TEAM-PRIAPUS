@@ -1,6 +1,4 @@
 <?php
-
-
 class Model_insertValues extends CI_Model {
 
     function addItem($array, $table) {
@@ -11,8 +9,6 @@ class Model_insertValues extends CI_Model {
         } 
     }
 
-
-    
 
 }
 

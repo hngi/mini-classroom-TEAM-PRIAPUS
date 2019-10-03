@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Teacher extends CI_Controller  {
 
     
-        function __construct()
-        {
-        parent::__construct();
+ 		function __construct()
+ 		{
+ 	    parent::__construct();
       $this->load->helper('form');
       $this->load->model('model_insertvalues');
-        }
+ 		}
 
 
 
@@ -18,8 +18,8 @@ class Teacher extends CI_Controller  {
         $this->load->view('teacher/home');
         $this->load->view('teacher/footer');
     }
-    
-    public function login()
+	
+	public function login()
     {
         if (isset($_POST['submit'])) {
          $this->form_validation->set_rules('email', 'Email', 'required');
@@ -63,14 +63,14 @@ class Teacher extends CI_Controller  {
         }
         $this->load->view('teacher/login');
     }
-    
+	
     public function signup()
-    {
+	{
        // $message = FALSE;
         
-      if (isset($_POST['submit'])) {    
+      if (isset($_POST['submit'])) {	
       
-         $this->form_validation->set_rules('name', ' Name', 'required');
+       	 $this->form_validation->set_rules('name', ' Name', 'required');
          $this->form_validation->set_rules('email', 'Email', 'required');
          $this->form_validation->set_rules('password', 'Password', 'required');
          $this->form_validation->set_rules('passconf', 'Comfirm Password', 'required|min_length[5]|matches[password]');
@@ -95,7 +95,7 @@ class Teacher extends CI_Controller  {
                            
                  }else{
 
-                    $this->session->set_flashdata("error",'<div class="alert alert-danger">
+                 	$this->session->set_flashdata("error",'<div class="alert alert-danger">
                                 <strong>Oh snap! "'.validation_errors().'"</strong>
                             </div>');
                             
@@ -111,7 +111,7 @@ class Teacher extends CI_Controller  {
     public function logout(){
             unset($_SESSION);
             session_destroy();
-         redirect("index.php/teacher/login");
+         redirect("index.php/app/index");
     }
 
 }

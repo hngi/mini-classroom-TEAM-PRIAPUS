@@ -30,7 +30,7 @@
 							</a>
 							<ul class="dropdown-menu dropdown-menu-default">
 								<li>
-									<a href="<?= base_url()?>index.php/student/logout">
+									<a href="<?= base_url()?>index.php/teacher/logout">
 										<i class="icon-logout"></i> Log Out </a>
 								</li>
 							</ul>

@@ -74,6 +74,7 @@
     <script type="text/javascript">
         var url = "<?php echo base_url(); ?>";
         function getClasses(id, class_id) {
+            document.getElementById('student_'+id).innerHTML = '<div class="loader"></div>'
             var arr = class_id.split(',');
             var classes = arr.join('-');
             console.log(classes);
