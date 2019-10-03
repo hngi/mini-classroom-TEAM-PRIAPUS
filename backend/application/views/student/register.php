@@ -44,15 +44,6 @@
         <div class="form-group">
           <input type="password" name="passconf" class="form-control form control-lg" placeholder="Comfirm Password">
         </div>
-        <div class="form-group">
-          <select name="class[]" multiple="multiple" class="form-control selectpicker" required>
-            <option value="">&mdash;Select Your Class &mdash;</option>
-            <?php foreach($class as $key => $class):?>
-            <option value="<?= $class->id;?>"><?= $class->class_name;?></option>
-            <?php endforeach;?>
-          </select>
-          <small>Press the control key and select multiple classes</small>
-        </div>
         <div class="forgot-link d-flex align-items-center justify-content-between">
           <div class="form-check">
             <input type="checkbox" required class="form-check-input" id="remember">
