@@ -100,7 +100,8 @@ body
     border-radius: 5px;
     border: none;
     height: 37px;
-    width: 38%;
+    width: 100%;
+    color: #fff;
 }
 a {
     text-decoration: none;
@@ -110,6 +111,18 @@ a:hover {
     text-decoration: none;
     border-color: #fff;
 }
+.form-group input:active {
+    border: 1px solid #3F0E40;
+}
+.form-group textarea {
+    height: 100px;
+}
+p .right {
+    margin-top: 180px;
+    text-align: center;
+    font-weight: bold;
+}
+
 
 /* mobile veiw */
 @media (max-width: 575.98px) {
@@ -131,11 +144,19 @@ a:hover {
     }
     .login-form {
         padding-bottom: 30%;
-        height: 250px;
+        height: 450px;
         width: 100%;
-        margin-top: 20px;
+        margin-top: -20px;
         background: #fff;
         border-radius: 8px;
+    }
+    .submit-btn {
+        background: #3f0e40;
+        border-radius: 5px;
+        border: none;
+        height: 37px;
+        width: 100%;
+        color: #fff;
     }
 
 }
