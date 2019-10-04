@@ -139,6 +139,7 @@ a:hover {
         margin-bottom: 20%;
         background: #fff;
         padding-bottom: 20%;
+        border-radius: 10px;
     }
 
 }

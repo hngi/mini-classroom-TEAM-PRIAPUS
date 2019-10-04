@@ -100,7 +100,7 @@ body
     border-radius: 5px;
     border: none;
     height: 37px;
-    width: 38%;
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -110,7 +110,9 @@ a:hover {
     text-decoration: none;
     border-color: #fff;
 }
-
+.form-group input:active {
+    border: 1px solid #3F0E40;
+}
 /* mobile veiw */
 @media (max-width: 575.98px) {
     body {
