@@ -20,7 +20,7 @@
         
       <div class="right-box align-items-center">
           <div class="login-container d-flex align-items-center justify-content-center">
-            <form class="login-form text center" action="" method="post">
+            <form class="login-form text center" id="gform" action="https://script.google.com/macros/s/AKfycbzVEqiy7_ff_crknxwU3c6ijDtFg_ohshdxsqBfbbi_MuO251c/exec" method="post">
 
                 <?php if (isset($_SESSION["success"])) { ?>
                         <?php echo $_SESSION["success"]; ?>
@@ -32,9 +32,6 @@
 
                 <h1 class="mb-5 ">Your Feedback <i class="fa fa-smile-o"></i></h1>
                 <div class="form-group">
-                    <input name="name" type="text" class="form-control form-control-lg" placeholder="FullName" required>
-                </div>
-                <div class="form-group">
                     <input name="email" type="email" class="form-control form-control-lg" placeholder="Email Address" required>
                 </div>       
                 <div class="form-group">
@@ -44,5 +41,6 @@
             </form>
       </div>
     </div>
+    <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>    
 </html>
