@@ -72,6 +72,7 @@
             <footer>
                 <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
                     <div class="col-md-12">
+                        <p class=""><a href="<?= base_url('index.php/feedback/')?>" class="">Feedback</a></p>
                              <?= date('Y')?> &copy; Designed with &hearts; Team Priapus 
                     </div>
                 </div>
