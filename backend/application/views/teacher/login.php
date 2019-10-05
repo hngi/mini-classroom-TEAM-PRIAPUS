@@ -35,15 +35,9 @@
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control form-control-lg" name="password" placeholder="password">
-                </div>       
-                <div class="forgot-link d-flex align-items-center justify-content-between">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="remember">
-                    <label for="remember">Remember Password</label>
-                </div><br>
-              
-              </div>
-              <button name="submit" type="submit" class="submit-btn mt-5">Login</button>
+                </div>    
+                <a href="<?= base_url()?>index.php/forgot_password" class="">Forgot password</a><br>
+                <button name="submit" type="submit" class="submit-btn mt-5">Login</button>
             </form>
       </div>
     </div>
