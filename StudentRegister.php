@@ -1,3 +1,5 @@
+
+
 <?php
 
 //$connect = mysqli_connect($servername, $username, $password $nameofthetablewhereuserinfoistobesubmitted);
@@ -54,6 +56,7 @@ $sel2 = mysqli_query($connect, "SELECT * FROM class_tb");
       $row1 = $que2['item'];
       $_SESSION['row']=$row1;   
       $_SESSION['course']=$que2['class_name'];
+      $_SESSION['selected']=$class;
 
 
       // echo "<h3 style='color:red;'>Registration Sucess</h3>";
@@ -75,8 +78,20 @@ $sel2 = mysqli_query($connect, "SELECT * FROM class_tb");
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SIGNUP &mdash; PRIAPUS</title>   
+  <title>SIGNUP &mdash; PRIAPUS</title>  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+<script type="text/javascript">
+function validateForm() {
+  // var x = document.forms["myForm"]["fname"].value;
+  // if (x == "") {
+  //   alert("Name must be filled out");
+  //   return false;
+  alert("We are in");
+  }
+}
+</script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/regstyle.css">
 </head>
@@ -93,29 +108,29 @@ $sel2 = mysqli_query($connect, "SELECT * FROM class_tb");
   <div class="right-box align-items-center">
     <a href="index.html" class="text-primary"><h5><b>Home</b></h5></a>
     <div class="login-container d-flex align-items-center justify-content-center">
-      <form class="signup-form text-center" method="post">
+      <form class="signup-form text-center" method="post" name="myForm" onsubmit="return validateForm()">
         <h1 class="mb-3">SIGN-UP</h1>
         <div class="form-group">
-          <input type="text"name="fname" class="form-control form-control-lg" placeholder="First Name">
+          <input type="text"name="fname" class="form-control form-control-lg" placeholder="First Name" >
         </div>
         <div class="form-group">
-            <input type="text" name="lname" class="form-control form-control-lg" placeholder="Last Name">
+            <input type="text" name="lname" class="form-control form-control-lg" placeholder="Last Name" >
         </div>
         <div class="form-group">
-          <input type="email" name="email" class="form-control form-control-lg" placeholder="email">
+          <input type="email" name="email" class="form-control form-control-lg" placeholder="email" >
         </div>
         <div class="form-group">
-          <input type="password" name="pass" class="form-control form-control-lg" placeholder="Password">
+          <input type="password" name="pass" class="form-control form-control-lg" placeholder="Password" >
         </div>
         <div class="form-group">
-          <input type="password" name="cpass" class="form-control form control-lg" placeholder="Password Again">
+          <input type="password" name="cpass" class="form-control form control-lg" placeholder="Password Again" >
         </div>
         <div class="form-group">
-          <select class="form-control selectpicker" name="class" required>
+          <select class="form-control selectpicker" name="class[]" required multiple id="class">
             <option value="">&mdash;Select a course &mdash;</option>
            <?php
       while ($row=mysqli_fetch_array($sel2)){
-        echo "<option value=". $row['id']. ">".$row['class_name']."</option>";
+        echo "<option value=". $row['class_name']. ">".$row['class_name']."</option>";
       }
       ?>
           </select>
@@ -133,10 +148,12 @@ $sel2 = mysqli_query($connect, "SELECT * FROM class_tb");
           </div>
         </div> <br> -->
         <div class="form-group">
-          <button type="submit" class="btn mt-5" name="submit">Sign Up</button>
+          <!-- <button type="submit" class="btn mt-5" name="submit" >Sign Up</button> -->
+          <input type="submit" value="Submit" name="submit"  class="btn mt-5">
         </div>
       </form>
     </div>
   </div>  
-</body>    
+</body> 
+   
 </html>

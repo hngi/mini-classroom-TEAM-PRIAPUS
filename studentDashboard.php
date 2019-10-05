@@ -3,6 +3,7 @@ session_start();
 // $_SESSION['row']=$row1;
  $row1=$_SESSION['row'];
  $class1=$_SESSION['course'];
+ $class=$_SESSION['selected'];
 // echo $row1;
 
 	
@@ -198,10 +199,20 @@ session_start();
 					<!-- start widget -->
 					<div class="state-overview">
 						<div class="row">
-							<div class="col-md-12">
-								<h3 class="text-danger"> <?php echo $class1 ?></h3>
+							<!-- <div class="col-md-12">
+								<h3 class="text-danger"> <?php echo $class ?></h3>
 							<h4 class="text-dark">
 								<?php echo $row1 ?>
+							</h4>
+						</div> -->
+							 <div class="col-md-12">
+								<h3 class="text-danger">Your Classes</h3>
+							<h4 class="text-dark">
+								<?php
+								foreach ($class as $select) {
+										echo "You have selected: "." ".$select."<br>";
+									}
+								?>
 							</h4>
 						</div>
 							<br>
